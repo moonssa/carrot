@@ -1,4 +1,4 @@
 TailWind
 modifier
 
-- hover [✅]
+- hover,focus, active [✅]
