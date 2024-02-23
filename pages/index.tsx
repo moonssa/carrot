@@ -36,17 +36,17 @@ const Home: NextPage = () => {
           Checkout
         </button>
       </div>
-      <div className="bg-white  overflow-hidden rounded-3xl shadow-xl ">
+      <div className="bg-white  overflow-hidden rounded-3xl shadow-xl group ">
         <div className="bg-blue-500 p-6 pb-14">
           <span className="text-white text-2xl">Profile</span>
         </div>
-        <div className="rounded-3xl bg-white relative -top-5 p-6">
+        <div className="rounded-3xl bg-white relative -top-5 p-6 ">
           <div className="flex relative -top-16 items-end justify-between">
             <div className="flex flex-col items-center">
               <span className="text-sm text-gray-500">Orders</span>
               <span className="font-medium">340</span>
             </div>
-            <div className="h-24 w-24 bg-sky-400 rounded-full" />
+            <div className="h-24 w-24 bg-sky-400 rounded-full group-hover:bg-red-200" />
             <div className="flex flex-col items-center">
               <span className="text-sm text-gray-500">Spent</span>
               <span className="font-medium">$2,310</span>
