@@ -2,24 +2,24 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-slate-400 xl:place-content-center py-20 px-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
-      <div className="bg-white flex flex-col justify-between p-6 rounded-2xl shadow-xl ">
+    <div className="bg-slate-400  xl:place-content-center py-20 px-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
+      <div className="bg-white dark:bg-black dark:text-white flex flex-col justify-between p-6 rounded-2xl shadow-xl ">
         <span className="font-semibold text-3xl">Select Item</span>
 
-        <div className="flex justify-between">
-          <span className=" text-gray-500">Grey Chair</span>
-          <span className="font-semibold">$29</span>
+        <div className="flex dark: text-gray-500 justify-between">
+          <span className=" text-gray-500 dark:text-gray-100">Grey Chair</span>
+          <span className="font-semibold dark:text-white">$29</span>
         </div>
         <div className="flex justify-between">
-          <span className=" text-gray-500">Grey Chair </span>
-          <span className="font-semibold">$19</span>
+          <span className=" text-gray-500 dark:text-gray-100">Grey Chair </span>
+          <span className="font-semibold dark:text-white">$19</span>
         </div>
         <div className="flex justify-between mt-2 pt-2 border-t-2 border-dashed">
           <span>Total</span>
           <span className="font-semibold">$99</span>
         </div>
 
-        <button className="mt-5 bg-blue-500 text-white text-center p-3 rounded-xl  w-1/2 block mx-auto hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500">
+        <button className="mt-5 bg-blue-500  text-white dark:bg-black dark:border-white dark:border text-center p-3 rounded-xl  w-1/2 block mx-auto hover:bg-teal-500 hover:text-black dark:hover:bg-white active:bg-yellow-500 focus:bg-red-500">
           Checkout
         </button>
       </div>
