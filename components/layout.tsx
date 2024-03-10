@@ -20,22 +20,16 @@ export default function Layout({
   };
   return (
     <div>
-      <div>
-        <div
-          className={cls(
-            !canGoBack ? "justify-center" : "",
-            "bg-white w-full max-w-xl text-lg font-medium py-3 fixed text-gray-700 border-b top-0 flex items-center "
-          )}
-        >
-          <>{canGoBack ? <button onClick={onClick}>&larr;</button> : null}</>
-          {title ? <span>{title}</span> : null}
-        </div>
+      <div className="bg-white w-full max-w-xl text-lg font-medium py-3 fixed text-gray-700 border-b top-0 flex items-center">
+        {canGoBack ? <button onClick={onClick}>&larr;</button> : null}
+        {title ? (
+          <span className={cls(canGoBack ? "mx-auto" : "", "")}> {title} </span>
+        ) : null}
       </div>
       <div className={cls("pt-16", hasTabBar ? "pb-16" : "")}>{children}</div>
       {hasTabBar ? (
         <nav className="bg-white max-w-xl px-4 text-gray-700 w-full  fixed bottom-0 pb-5 pt-3 flex justify-around items-center">
           <Link href="/" className="flex flex-col items-center ">
-            {/* <div className="flex flex-col items-center "> */}
             <svg
               className="w-6 h-6"
               fill="none"
@@ -52,11 +46,9 @@ export default function Layout({
               ></path>
             </svg>
             <span className="text-sm text-gray-500">홈</span>
-            {/* </div> */}
           </Link>
 
           <Link href="/community" className="flex flex-col items-center ">
-            {/* <div className="flex flex-col items-center "> */}
             <svg
               className="w-6 h-6"
               fill="none"
@@ -73,10 +65,8 @@ export default function Layout({
               ></path>
             </svg>
             <span className="text-sm text-gray-500">동네생활</span>
-            {/* </div> */}
           </Link>
           <Link href="chats" className="flex flex-col items-center ">
-            {/* <div className="flex flex-col items-center "> */}
             <svg
               className="w-6 h-6"
               fill="none"
@@ -93,11 +83,9 @@ export default function Layout({
               ></path>
             </svg>
             <span className="text-sm text-gray-500">채팅</span>
-            {/* </div> */}
           </Link>
 
           <Link href="/live" className="flex flex-col items-center ">
-            {/* <div className="flex flex-col items-center "> */}
             <svg
               className="w-6 h-6"
               fill="none"
@@ -114,11 +102,9 @@ export default function Layout({
               ></path>
             </svg>
             <span className="text-sm text-gray-500">라이브</span>
-            {/* </div> */}
           </Link>
 
           <Link href="/profile" className="flex flex-col items-center ">
-            {/* <div className="flex flex-col items-center "> */}
             <svg
               className="w-6 h-6"
               fill="none"
@@ -135,7 +121,6 @@ export default function Layout({
               ></path>
             </svg>
             <span className="text-sm text-gray-500">나의캐럿</span>
-            {/* </div> */}
           </Link>
         </nav>
       ) : null}
